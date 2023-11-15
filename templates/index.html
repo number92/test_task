@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <section class="u-clearfix u-section-1" id="sec-5025">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-border-6 u-border-grey-75 u-container-style u-group u-opacity u-opacity-25 u-palette-4-light-2 u-radius-50 u-shape-round u-group-1">
+          <div class="u-container-layout u-container-layout-1">
+            <h5 class="u-align-center u-text u-text-1">Задачи</h5>
+            <ul class="u-custom-list u-hover-feature u-text u-text-2">
+            {% for task in task_list %}
+             <li>
+                <div class="u-list-icon">
+                  <div style="font-size: 1.2em; margin: -1.2em;">□</div>
+                </div>{{ task }}
+              </li>
+            {% endfor %}
+            </ul>
+            <a href="#sec-46ab" class="u-btn u-btn-round u-button-style u-dialog-link u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-1">Новая задача</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    {%include "form.html"%}
+  
+<style>.u-dialog-section-5 .u-dialog-1 {
+  width: 800px;
+  min-height: 313px;
+  margin: 60px auto;
+}
+
+.u-dialog-section-5 .u-container-layout-1 {
+  padding: 30px;
+}
+
+.u-dialog-section-5 .u-form-1 {
+  height: 253px;
+  margin: 0 170px 0 0;
+}
+
+.u-dialog-section-5 .u-form-group-2 {
+  margin-left: 0;
+}
+
+.u-dialog-section-5 .u-icon-1 {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 1199px) {
+  .u-dialog-section-5 .u-form-1 {
+    width: 570px;
+  }
+
+  .u-dialog-section-5 .u-form-group-2 {
+    width: 570px;
+    height: 165px;
+    margin-top: 0;
+    margin-right: 170px;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-dialog-section-5 .u-dialog-1 {
+    width: 720px;
+  }
+
+  .u-dialog-section-5 .u-form-1 {
+    margin-right: 90px;
+  }
+
+  .u-dialog-section-5 .u-form-group-2 {
+    margin-right: 90px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-dialog-section-5 .u-dialog-1 {
+    width: 540px;
+  }
+
+  .u-dialog-section-5 .u-container-layout-1 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .u-dialog-section-5 .u-form-1 {
+    width: 520px;
+    margin-right: 0;
+  }
+
+  .u-dialog-section-5 .u-form-group-2 {
+    width: 520px;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-dialog-section-5 .u-dialog-1 {
+    width: 340px;
+  }
+
+  .u-dialog-section-5 .u-form-1 {
+    width: 320px;
+  }
+
+  .u-dialog-section-5 .u-form-group-2 {
+    width: 320px;
+  }
+}</style>
+{% endblock content %}
